@@ -5,11 +5,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
+import org.springframework.stereotype.Repository;
 import sani.sanispring.domain.Member;
 
-public class MemoryMemberRepository implements MemberRepository{
+public class MemoryMemberRepository implements MemberRepository {
 
-  private static Map<Long, Member> store = new HashMap<>();
+  private final static Map<Long, Member> store = new HashMap<>();
   private static long sequence = 0L;
 
   @Override
